@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color-dark: hsl(300, 43%, 22%);
+  --primary-color-light: hsl(333, 80%, 67%);
+
+  --neutral-color-dark: hsl(303, 10%, 53%);
+  --neutral-color-light: hsl(300, 24%, 96%);
+  --neutral-color-white: hsl(0, 0%, 100%);
+
+  --font-size: 15px;
+  --font-family: "League Spartan", sans-serif;
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 700;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.testimonials {
+  height: 100vh;
+  position: relative;
+}
+
+.testimonial_bg_img_desktop {
+  display: none;
+}
+.testimonial_bg_img_mobile {
+  height: 100%;
+  display: block;
+}
+
+.testimonial_bg_img_mobile .img_bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.container {
+  position: absolute;
+  max-width: 80vw;
+  margin: auto;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.testimonial_container {
+  padding: 80px 0;
+  height: auto;
+}
+
+.testimonial_container_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product_heading h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  align-items: center;
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-color-dark);
+  margin-bottom: 20px;
+}
+
+.product_heading p {
+  text-align: center;
+  font-size: medium;
+  color: var(--neutral-color-dark);
+}
+
+.product_review {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 100%;
+}
+
+.product_review .review {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: var(--neutral-color-light);
+  flex-direction: column;
+}
+
+.product_review .review p {
+  color: var(--primary-color-dark);
+}
+
+/* Testimonial user cards */
+
+.testimonial_container_card {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--primary-color-dark);
+  color: var(--neutral-color-white);
+}
+
+.card .user {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar img {
+  width: 40px;
+}
+
+.user_name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user_name .status {
+  color: var(--primary-color-light);
+}
+
+/* Mobile Screen */
+@media screen and (min-width: 375px) {
+  .testimonial_bg_img_mobile {
+    display: none;
+  }
+
+  .testimonial_bg_img_desktop {
+    height: 100%;
+    display: block;
+  }
+
+  .testimonial_bg_img_desktop .img_bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .testimonial_container_heading {
+    flex-direction: row;
+  }
+
+  .product_review .review_second {
+    margin-right: 35px;
+  }
+
+  .product_review .review_first {
+    margin-right: 120px;
+  }
+
+  .product_heading {
+    max-width: 40%;
+  }
+  .product_review {
+    min-width: auto;
+  }
+
+  .product_review .review {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .product_heading h1 {
+    align-items: flex-start;
+    font-size: 48px;
+  }
+
+  .product_heading p {
+    text-align: left;
+  }
+
+  .testimonial_container_card {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .card_second {
+    margin-top: 25px;
+  }
+
+  .card_third {
+    margin-top: 50px;
+  }
+}
+
+/* Desktop Screen */
+@media screen and (min-width: 1440px) {
+}
